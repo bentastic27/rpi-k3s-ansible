@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install node exporter
+    apt:
+      name: prometheus-node-exporter
+      update_cache: yes
+      state: latest
